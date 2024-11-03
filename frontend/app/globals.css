@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-dotted-pattern {
+  background-image: radial-gradient(circle, #000000 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.font-handwritten {
+  font-family: 'Architects Daughter', cursive;
+}
+
+

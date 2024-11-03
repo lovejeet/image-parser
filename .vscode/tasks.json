@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run Backend with Kill on Port 5001",
+        "type": "shell",
+        "command": "lsof -ti :5001 | xargs kill -9 && node server.js",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": [],
+        "options": {
+          "cwd": "${workspaceFolder}/backend"
+        }
+      },
+
+      {
+        "label": "Run Frontend with Kill on Port 3000",
+        "type": "shell",
+        "command": "lsof -ti :3000 | xargs kill -9 && npm run dev",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "isBackground": true,
+        "problemMatcher": [],
+        "options": {
+          "cwd": "${workspaceFolder}/frontend"
+        }
+      }
+    ]
+  }
+  
